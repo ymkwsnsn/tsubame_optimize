@@ -29,7 +29,7 @@ Include: yum
     wget https://download.open-mpi.org/release/open-mpi/v2.1/${OPENMPI_NAME}.tar.gz
     tar -xvf ${OPENMPI_NAME}.tar.gz
     cd ${OPENMPI_NAME}
-    ./configure --prefix=/usr/local --with-sge --with-cuda --with-psm2 --enable-orterun-prefix-by-default --enable-mpi-cxx --with-lustre=/usr --with-hwloc --with-io-romio-flags=“--with-file-system=nfs+lustre --enable-f77 --enable-f90”
+    ./configure --prefix=/usr/local --with-sge --with-cuda --with-psm2 --enable-orterun-prefix-by-default --enable-mpi-cxx --with-lustre=/usr --with-hwloc --with-io-romio-flags=“--with-file-system=nfs+lustre --enable-f77 --enable-f90"
     make all install
     /usr/local/bin/mpicc examples/ring_c.c -o /usr/bin/mpi_ring
     cd /
